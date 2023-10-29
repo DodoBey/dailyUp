@@ -11,7 +11,7 @@ export default {
         secondAlternateColor: "#b23850",
       },
       fontFamily: {
-        abril: ["Abril Fatface", "serif"],
+        robo: ["Roboto", "sans-serif"],
       },
     },
   },
