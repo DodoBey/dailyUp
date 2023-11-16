@@ -4,12 +4,14 @@ import Modal, { ModalHandle } from "../Common/Modal/Modal";
 import { useRef, useState } from "react";
 import Button from "../Common/Button/Button";
 import SignUp from "../SignUp/SignUp";
+import Login from "../Login/Login";
 
 const WelcomePage = () => {
   const modalRef = useRef<ModalHandle>(null);
 
   const [modalContent, setModalContent] = useState("");
   const [signingUp, setSigningUp] = useState<boolean>(false);
+  const [isLoggingIn, setIsLoggingIn] = useState<boolean>(false);
 
   const modalOpenHandler = (modalValue: string) => {
     setModalContent(modalValue);
@@ -27,6 +29,10 @@ const WelcomePage = () => {
 
   const signUpHandler = () => {
     setSigningUp(true);
+  };
+
+  const logInHandler = () => {
+    setIsLoggingIn(true);
   };
 
   return (
@@ -100,7 +106,10 @@ const WelcomePage = () => {
               className="mt-4 flex flex-col items-center"
             >
               <span>Already have an account?</span>
-              <Button className="border border-alternateColor my-auto rounded-3xl w-60 p-2 bg-alternateColor border-y-2 border-x-2 hover:bg-secondaryColor mt-2">
+              <Button
+                className="border border-alternateColor my-auto rounded-3xl w-60 p-2 bg-alternateColor border-y-2 border-x-2 hover:bg-secondaryColor mt-2"
+                onClick={logInHandler}
+              >
                 Login
               </Button>
             </div>
@@ -108,6 +117,7 @@ const WelcomePage = () => {
         </div>
       </section>
       {signingUp && <SignUp />}
+      {isLoggingIn && <Login />}
     </>
   );
 };
