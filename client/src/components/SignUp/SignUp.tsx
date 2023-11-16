@@ -2,10 +2,6 @@ import { useEffect, useRef } from "react";
 import Input from "../Common/Input/Input";
 import Modal, { ModalHandle } from "../Common/Modal/Modal";
 
-// type SignUpProps = {
-//   isClicked: boolean;
-// };
-
 const SignUp = () => {
   const modalRef = useRef<ModalHandle>(null);
 
