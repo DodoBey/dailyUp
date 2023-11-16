@@ -1,5 +1,7 @@
 # dailyUp
 
+**Work in progress...
+
 Social Media App Created by Utilizing
 
 - Frontend Stack
@@ -15,3 +17,4 @@ Social Media App Created by Utilizing
   - Node
   - Express
   - MongoDB
+
