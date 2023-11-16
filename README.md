@@ -1,6 +1,6 @@
 # dailyUp
 
-**Work in progress...
+**Work in progress...**
 
 Social Media App Created by Utilizing
 
